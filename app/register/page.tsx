@@ -3,7 +3,7 @@ import { FormRegister } from "../../components/formRegister";
 
 export default function Register() {
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="h-[85%] bg-black relative">
       <div className="relative w-full h-[600px] overflow-hidden">
         <Image
           src="/bg-movies.png"
