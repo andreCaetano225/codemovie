@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { FormLogin } from "../components/formLogin";
+import { FormRegister } from "../../components/formRegister";
 
-export default function Home() {
+export default function Register() {
   return (
     <div className="min-h-screen bg-black relative">
       <div className="relative w-full h-[600px] overflow-hidden">
@@ -13,8 +13,8 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0  bg-gradient-to-b from-black/70 via-black/70 to-black" />
-        <FormLogin />
       </div>
+      <FormRegister />
     </div>
   );
 }

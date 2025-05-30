@@ -9,9 +9,10 @@
   --color-background: var(--background);
   --color-foreground: #000222;
   --color-primary: #8E4EC6;
-  --color-primary-hover: #8E4EC6;
+  --color-primary-hover:  #9A5CD0;
   --color-secondary: #B744F714;
   --color-secondary-hover: #C150FF2E;
+  --color-background: #1A191B;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
