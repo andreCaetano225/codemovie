@@ -3,7 +3,7 @@ import { FormLogin } from "../../components/formLogin";
 
 export default function Home() {
   return (
-    <div className=" h-[85%] bg-black relative">
+    <div className=" h-[85%] bg-[#121113] relative">
       <div className="relative w-full h-[600px] overflow-hidden">
         <Image
           src="/bg-movies.png"
@@ -12,7 +12,7 @@ export default function Home() {
           className="object-cover z-0"
           priority
         />
-        <div className="absolute inset-0  bg-gradient-to-b from-black/70 via-black/70 to-black" />
+        <div className="absolute inset-0  bg-gradient-to-b from-[#121113]/70 via-[#121113]/70 to-[#121113]" />
         <FormLogin />
       </div>
     </div>
