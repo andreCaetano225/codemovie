@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 import { CatalogMovie } from "./catalogMovie";
+import { AddMovieDrawer } from "../../components/drawer";
 
 export default function Movies() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <div className="bg-[#121113]">
       <div className="relative">
@@ -28,7 +33,10 @@ export default function Movies() {
                 <button className="px-4 py-2 w-full sm:w-auto bg-[#B744F7]/20 rounded hover:bg-[#B744F7]/40  transition cursor-pointer">
                   Filtros
                 </button>
-                <button className="px-4 py-2 w-full sm:w-[20rem] bg-primary rounded hover:bg-primary-hover transition cursor-pointer">
+                <button
+                  onClick={() => setIsDrawerOpen(true)}
+                  className="px-4 py-2 w-full sm:w-[15rem] bg-primary rounded hover:bg-primary-hover transition cursor-pointer"
+                >
                   Adicionar Filme
                 </button>
               </div>
@@ -61,6 +69,8 @@ export default function Movies() {
           </div>
         </div>
       </div>
+
+      <AddMovieDrawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen} />
     </div>
   );
 }
