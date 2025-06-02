@@ -3,14 +3,15 @@ import Image from "next/image";
 import { useState } from "react";
 import { CatalogMovie } from "./catalogMovie";
 import { AddMovieDrawer } from "../../components/drawer";
+import { FilterModal } from "../../components/modalFilter";
 
 export default function Movies() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isModalFilterOpen, setIsModalFilterOpen] = useState(false);
 
   return (
     <div className="bg-[#121113]">
       <div className="relative">
-        {/* Fundo com imagem e gradiente */}
         <Image
           src="/bg-movies.png"
           alt="Background"
@@ -30,12 +31,15 @@ export default function Movies() {
               />
 
               <div className="flex flex-row gap-2 w-full sm:w-auto items-end sm:items-center">
-                <button className="px-4 py-2 w-full sm:w-auto bg-[#B744F7]/20 rounded hover:bg-[#B744F7]/40  transition cursor-pointer">
+                <button
+                  onClick={() => setIsModalFilterOpen(true)}
+                  className="px-4 py-2 w-full sm:w-auto bg-[#B744F7]/20 rounded hover:bg-[#B744F7]/40  transition cursor-pointer"
+                >
                   Filtros
                 </button>
                 <button
-                  onClick={() => setIsDrawerOpen(true)}
                   className="px-4 py-2 w-full sm:w-[15rem] bg-primary rounded hover:bg-primary-hover transition cursor-pointer"
+                  onClick={() => setIsDrawerOpen(true)}
                 >
                   Adicionar Filme
                 </button>
@@ -70,7 +74,11 @@ export default function Movies() {
         </div>
       </div>
 
-      <AddMovieDrawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen} />
+      <AddMovieDrawer onOpenChange={setIsDrawerOpen} open={isDrawerOpen} />
+      <FilterModal
+        open={isModalFilterOpen}
+        onOpenChange={setIsModalFilterOpen}
+      />
     </div>
   );
 }
