@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useLoginForm } from "../hooks/useLoginForm";
 import { ButtonApp } from "./buttonApp";
 import { InputField } from "./inputFiel";
@@ -32,13 +33,15 @@ export const FormLogin = () => {
               error={errors.password?.message}
             />
             <div className=" flex flex-row items-center justify-between ">
-              <a
-                href="#"
+              <Link
+                href="/register"
                 className="text-sm text-primary hover:underline text-center sm:text-left"
               >
                 Esqueci minha senha
-              </a>
-              <ButtonApp type="submit">Entrar</ButtonApp>
+              </Link>
+              <Link href={"/movies"}>
+                <ButtonApp type="button">Entrar</ButtonApp>
+              </Link>
             </div>
           </form>
         </div>

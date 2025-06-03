@@ -2,6 +2,7 @@
 import { InputField } from "./inputFiel";
 import { ButtonApp } from "./buttonApp";
 import { useRegisterForm } from "../hooks/useRegisterForm";
+import Link from "next/link";
 
 export const FormRegister = () => {
   const {
@@ -48,7 +49,9 @@ export const FormRegister = () => {
           />
 
           <div className="flex justify-end">
-            <ButtonApp type="submit">Cadastrar</ButtonApp>
+            <Link href={"/movies"}>
+              <ButtonApp type="button">Cadastrar</ButtonApp>
+            </Link>
           </div>
         </form>
       </div>
