@@ -13,6 +13,7 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0  bg-gradient-to-b from-[#121113]/70 via-[#121113]/70 to-[#121113]" />
+        
         <FormLogin />
       </div>
     </div>
